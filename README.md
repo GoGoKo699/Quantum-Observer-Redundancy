@@ -50,6 +50,8 @@ The figure shows a single branch at fixed received fraction $`\eta=10^{-4}`$ whi
 
 | What you want to understand | Start here |
 |---|---|
+| The concepts from foundations to the complete result | [Learning route](learning/README.md), [30-milestone map](learning/milestones.md) and [worked tutorial](learning/tutorial.md) |
+| How Wiseman and Milburn's measurement framework enters the proofs | [Selected-source bridge](learning/source_bridge.md) |
 | The task, receiver classes and physical resource | [Model and definitions](science/model.md) |
 | How a one-bit receiver works | [Displaced counting](science/counting.md) |
 | Why quantum memory cannot improve the leading error | [The partial-output quantum limit](science/quantum_limit.md) |

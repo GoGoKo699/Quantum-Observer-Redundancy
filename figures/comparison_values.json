@@ -1,0 +1,258 @@
+{
+  "status": "passed",
+  "evaluation_type": "Ordinary floating-point numerical evaluation with checked endpoint inequalities; not formal interval certification",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "figure": {
+    "path": "figures/receiver_comparison.svg",
+    "sha256": "20d83adda1a277d8d5030b04a82b67e710d545dc034f6bf087ee304b7ec7bb94",
+    "svg_hashsalt": "quantum-observer-redundancy-receiver-comparison-v1",
+    "svg_date_metadata": null
+  },
+  "drive_sweep": {
+    "eta": 0.0001,
+    "equal_sharing_R": 10000,
+    "q_range": [
+      1e-06,
+      0.1
+    ],
+    "points": 501,
+    "relationship": "r_squared=2*eta*q; drive varies while eta is fixed",
+    "wonham_role": "exact classical reference, not exact quantum homodyne",
+    "shaded_quantity": "analytic bracket for exact-source optimal diffusive homodyne",
+    "minimum_A": 0.99988,
+    "T_range": [
+      0.010101010203040507,
+      0.010111218346200296
+    ],
+    "T_ad_range": [
+      0.010101510290552384,
+      0.010111718433462391
+    ],
+    "minimum_lower_bound_to_nulling_ratio": 1.8914112185551009,
+    "sample_values": [
+      {
+        "q": 1e-06,
+        "r_squared": 2e-10,
+        "nulling_error": 4.999995000005e-07,
+        "classical_wonham_error": 3.90611774309102e-06,
+        "homodyne_lower_bound": 3.8666600545130766e-06,
+        "homodyne_upper_bound": 3.94557347826826e-06,
+        "ratio_lower": 7.733327842346261,
+        "ratio_upper": 7.8911548476834765
+      },
+      {
+        "q": 9.999999999999999e-06,
+        "r_squared": 2e-09,
+        "nulling_error": 4.9999500004999945e-06,
+        "classical_wonham_error": 3.330287223030082e-05,
+        "homodyne_lower_bound": 3.296646289318033e-05,
+        "homodyne_upper_bound": 3.363926491307079e-05,
+        "ratio_lower": 6.593358511561854,
+        "ratio_upper": 6.727920261143985
+      },
+      {
+        "q": 0.0001,
+        "r_squared": 2e-08,
+        "nulling_error": 4.999500049995001e-05,
+        "classical_wonham_error": 0.0002753403433566892,
+        "homodyne_lower_bound": 0.0002725589872636504,
+        "homodyne_upper_bound": 0.0002781215617554609,
+        "ratio_lower": 5.451724863247535,
+        "ratio_upper": 5.562987478232728
+      },
+      {
+        "q": 0.001,
+        "r_squared": 2.0000000000000002e-07,
+        "nulling_error": 0.0004995004995004996,
+        "classical_wonham_error": 0.0021702610446859283,
+        "homodyne_lower_bound": 0.002148337909197538,
+        "homodyne_upper_bound": 0.0021921830948538725,
+        "ratio_lower": 4.300972494213471,
+        "ratio_upper": 4.3887505558974516
+      },
+      {
+        "q": 0.01,
+        "r_squared": 2.0000000000000003e-06,
+        "nulling_error": 0.0049504950495049506,
+        "classical_wonham_error": 0.015572110340674294,
+        "homodyne_lower_bound": 0.0154147926203135,
+        "homodyne_upper_bound": 0.015729420273617213,
+        "ratio_lower": 3.113788109303327,
+        "ratio_upper": 3.177342895270677
+      },
+      {
+        "q": 0.1,
+        "r_squared": 2e-05,
+        "nulling_error": 0.045454545454545456,
+        "classical_wonham_error": 0.08685145466213012,
+        "homodyne_lower_bound": 0.08597323720705004,
+        "homodyne_upper_bound": 0.08772962868390403,
+        "ratio_lower": 1.8914112185551009,
+        "ratio_upper": 1.9300518310458887
+      }
+    ]
+  },
+  "observer_count_interpretation": {
+    "fixed_s": 0.0001,
+    "access": "equal sharing, eta=1/R, q=s^2*R/8",
+    "nulling": "Exact integer floor of 16*epsilon/[s^2*(1-2*epsilon)], also checked at that count and the next integer",
+    "feasible": "The upper homodyne bound is at most epsilon at the listed feasible count; the real quadrature attains this guarantee.",
+    "excluded": "The lower homodyne bound exceeds epsilon at the listed excluded count. All larger counts are excluded because the optimal receiver-class error is nondecreasing as received fraction decreases. No global monotonicity of the bound expression is assumed.",
+    "maximum_count_bracket": "The optimal homodyne count lies between the feasible count and one less than the excluded count, inclusively.",
+    "roots": "Each root has a sign-changing continuous bracket and checked adjacent integer inequalities; a root is a numerical evaluation."
+  },
+  "observer_counts": [
+    {
+      "s": 0.0001,
+      "epsilon": 0.0001,
+      "nulling_maximum_integer_R": 160032,
+      "nulling_real_boundary_decimal": "160032.00640128025605121024204840968193638727745549",
+      "homodyne_feasible_integer_R": 26211,
+      "homodyne_first_excluded_integer_at_crossing": 26568,
+      "homodyne_maximum_R_bracket": [
+        26211,
+        26567
+      ],
+      "upper_crossing": {
+        "root": 26211.604011237723,
+        "iterations": 7,
+        "root_residual": 7.747979775124536e-17,
+        "bracket": [
+          800,
+          160032
+        ],
+        "bracket_residuals": [
+          -9.595071853262157e-05,
+          0.00041719142981478085
+        ]
+      },
+      "lower_crossing": {
+        "root": 26567.960514689872,
+        "iterations": 7,
+        "root_residual": -5.971243464963916e-17,
+        "bracket": [
+          800,
+          160032
+        ],
+        "bracket_residuals": [
+          -9.623713248415195e-05,
+          0.0004146057259003672
+        ]
+      },
+      "endpoint_checks": {
+        "nulling_error_at_R_null": 9.999999600080001e-05,
+        "nulling_error_at_R_null_plus_1": 0.00010000062075082423,
+        "homodyne_upper_at_feasible_R": 9.999789308553071e-05,
+        "homodyne_upper_at_feasible_R_plus_1": 0.00010000138128737919,
+        "homodyne_lower_at_excluded_R_minus_1": 9.999667227369209e-05,
+        "homodyne_lower_at_excluded_R": 0.00010000013679754443,
+        "feasible_margin": 2.1069144692933495e-09,
+        "excluded_margin": 1.367975444293429e-10,
+        "all_requested_inequalities_checked": true
+      }
+    },
+    {
+      "s": 0.0001,
+      "epsilon": 0.001,
+      "nulling_maximum_integer_R": 1603206,
+      "nulling_real_boundary_decimal": "1603206.4128256513026052104208416833667334669338677",
+      "homodyne_feasible_integer_R": 333694,
+      "homodyne_first_excluded_integer_at_crossing": 334990,
+      "homodyne_maximum_R_bracket": [
+        333694,
+        334989
+      ],
+      "upper_crossing": {
+        "root": 333694.19399683224,
+        "iterations": 7,
+        "root_residual": 1.9884267843384151e-16,
+        "bracket": [
+          800,
+          1603206
+        ],
+        "bracket_residuals": [
+          -0.0009959507185326216,
+          0.0029918456418422494
+        ]
+      },
+      "lower_crossing": {
+        "root": 334989.9660280745,
+        "iterations": 7,
+        "root_residual": 1.97758476261356e-16,
+        "bracket": [
+          800,
+          1603206
+        ],
+        "bracket_residuals": [
+          -0.000996237132484152,
+          0.0029855402827414683
+        ]
+      },
+      "endpoint_checks": {
+        "nulling_error_at_R_null": 0.000999999743015,
+        "nulling_error_at_R_null_plus_1": 0.0010000003655174998,
+        "homodyne_upper_at_feasible_R": 0.0009999994807396602,
+        "homodyne_upper_at_feasible_R_plus_1": 0.0010000021573836916,
+        "homodyne_lower_at_excluded_R_minus_1": 0.0009999974194215802,
+        "homodyne_lower_at_excluded_R": 0.001000000090750372,
+        "feasible_margin": 5.192603398044421e-10,
+        "excluded_margin": 9.075037206082714e-11,
+        "all_requested_inequalities_checked": true
+      }
+    },
+    {
+      "s": 0.0001,
+      "epsilon": 0.01,
+      "nulling_maximum_integer_R": 16326530,
+      "nulling_real_boundary_decimal": "16326530.612244897959183673469387755102040816326531",
+      "homodyne_feasible_integer_R": 4690998,
+      "homodyne_first_excluded_integer_at_crossing": 4696158,
+      "homodyne_maximum_R_bracket": [
+        4690998,
+        4696157
+      ],
+      "upper_crossing": {
+        "root": 4690998.64699411,
+        "iterations": 8,
+        "root_residual": 5.204170427930421e-18,
+        "bracket": [
+          800,
+          16326530
+        ],
+        "bracket_residuals": [
+          -0.009995950718532622,
+          0.017615570160779567
+        ]
+      },
+      "lower_crossing": {
+        "root": 4696157.680453089,
+        "iterations": 8,
+        "root_residual": -8.673617379884035e-18,
+        "bracket": [
+          800,
+          16326530
+        ],
+        "bracket_residuals": [
+          -0.009996237132484152,
+          0.017601901081426008
+        ]
+      },
+      "endpoint_checks": {
+        "nulling_error_at_R_null": 0.0099999996325,
+        "nulling_error_at_R_null_plus_1": 0.01000000023275,
+        "homodyne_upper_at_feasible_R": 0.009999998841381476,
+        "homodyne_upper_at_feasible_R_plus_1": 0.010000000632152912,
+        "homodyne_lower_at_excluded_R_minus_1": 0.009999998782186322,
+        "homodyne_lower_at_excluded_R": 0.010000000571896352,
+        "feasible_margin": 1.158618524038646e-09,
+        "excluded_margin": 5.718963514561581e-10,
+        "all_requested_inequalities_checked": true
+      }
+    }
+  ]
+}

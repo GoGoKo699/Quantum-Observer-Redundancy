@@ -1,0 +1,20 @@
+# Quantum observer redundancy
+
+This project studies causal prediction of a terminal projective Z outcome of a driven dephasing qubit from separate fractions of its output. Total source coupling is fixed. The comparison is between arbitrary quantum receivers and diffusive homodyne receivers with adaptive phase. A one-bit displaced-counting receiver attains the leading partial-output quantum error.
+
+## Scientific routes
+
+- Task, resource, receiver definitions, error criterion and notation: science/model.md
+- Explicit receiver and exact stationary error: science/counting.md
+- Arbitrary-memory quantum converse, physical lost-output instrument and full-output exception: science/quantum_limit.md
+- Wonham law, convex Poisson solution and uniform adaptive-phase homodyne bound: science/homodyne.md
+- Fixed-allocation optimality, observer-count asymptotics and finite examples: science/observer_counts.md
+- Calibration, detector efficiency, dark counts and exact accuracy condition: science/imperfections.md
+- Connected reading order: science/README.md
+- Attribution and limits of literature comparisons: references/related-work.md
+- Bibliographic identities: references/references.bib
+- Numerical commands, coverage and limits: verification/README.md
+
+## Essential distinctions
+
+The counting formula is exact for the specified receiver; unrestricted quantum optimality is asymptotic. The quantum converse is uniform for received fractions at most one half. The homodyne theorem is for a diffusive quadrature current, not finite-local-oscillator counting or all Gaussian preprocessing. Its finite bracket requires r^2 + eta < 1. The classical Wonham error is a reference in that bracket. The result concerns individual long-run marginal errors and does not establish simultaneous unanimous agreement. Long-run operation precedes the small-parameter limit. The observer-count logarithm requires the stated joint weak-drive and small-tolerance regime. Read the source pages before transferring a result to a different task.

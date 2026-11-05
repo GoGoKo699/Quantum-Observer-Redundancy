@@ -155,7 +155,7 @@ Its stochastic-exponential solution stays nonnegative. The coefficient in the st
 This gives Wasserstein contraction of order one at rate one. Compactness gives an invariant law; contraction makes it unique and implies
 
 ```math
-\operatorname{Lip}(P_s g)\le e^{-s}\operatorname{Lip}(g)
+\mathrm{Lip}(P_s g)\le e^{-s}\mathrm{Lip}(g)
 ```
 
 for its semigroup $`P_s`$.
@@ -165,7 +165,7 @@ Solving the zero-current equation $`(a_qp_q)'=-zp_q`$ gives the invariant densit
 ```math
 p_q(z)=\frac1{\mathcal Z(q)}
 \frac{\exp[-q/(1-z^2)]}{(1-z^2)^2},
-\qquad -1<z<1.
+\qquad -1\lt z\lt 1.
 ```
 
 The density is integrable, and $`a_qp_q`$ vanishes faster than any power at the endpoints. Integration by parts verifies stationarity on twice continuously differentiable test functions; uniqueness identifies this density with the invariant law.
@@ -203,7 +203,7 @@ Thus the exact stationary Bayes error is
 ```math
 e_{\mathrm W}(q)
 =\frac12\left[1-\frac{e^{-q}}{q\mathcal Z(q)}\right],
-\qquad 0<e_{\mathrm W}(q)<\frac12.
+\qquad 0\lt e_{\mathrm W}(q)\lt\frac12.
 ```
 
 For stable numerical evaluation, write $`K_\nu^{\mathrm{sc}}(u)=e^uK_\nu(u)`$. Then
@@ -288,11 +288,11 @@ and hence $`a_q f_q''-zf_q'=h-e`$ in the interior. Since $`h`$ is continuous and
 For $`0<z<1`$, define three positive integrals:
 
 ```math
-L(z)=\int_z^1 p(u)\,du,
-\qquad
-M(z)=\int_z^1 up(u)\,du=a_q(z)p(z),
-\qquad
-J(z)=M(z)-zL(z)=\int_z^1(u-z)p(u)\,du.
+\begin{aligned}
+L(z)&=\int_z^1 p(u)\,du,\\
+M(z)&=\int_z^1 up(u)\,du=a_q(z)p(z),\\
+J(z)&=M(z)-zL(z)=\int_z^1(u-z)p(u)\,du.
+\end{aligned}
 ```
 
 Using $`h(u)=(1-u)/2`$ on this half-interval gives
@@ -346,7 +346,7 @@ f_q(z)
 ```
 
 The integral converges uniformly: contraction bounds the absolute integrand by
-$`e^{-s}\operatorname{Lip}(h)\int|z-u|p_q(u)\,du\le e^{-s}`$.
+$`e^{-s}\mathrm{Lip}(h)\int|z-u|p_q(u)\,du\le e^{-s}`$.
 
 Convexity also has a decision-theoretic explanation. For fixed $`s`$, $`P_s h(z)`$ is the optimal error for deciding the terminal classical sign when the initial prior for $`+1`$ is $`(1+z)/2`$. Every fixed decision rule has risk affine in that prior. The infimum over decision rules is concave, making the negative time integral convex. The explicit calculation above supplies the endpoint values needed for the relative estimate.
 

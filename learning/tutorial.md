@@ -8,7 +8,7 @@ This tutorial follows the settled [30-milestone map](milestones.md). Wiseman and
 
 ## 1. A state, a record and a prediction
 
-**Milestones [M01–M04](milestones.md#m01).** Let $`Z`$ have eigenvalues $`+1`$ and $`-1`$, with projectors $`P_+`$ and $`P_-`$. For an observer's conditional state $`\rho`$, write $`z=\operatorname{tr}(Z\rho)`$. The better sign guess has conditional error
+**Milestones [M01–M04](milestones.md#m01).** Let $`Z`$ have eigenvalues $`+1`$ and $`-1`$, with projectors $`P_+`$ and $`P_-`$. For an observer's conditional state $`\rho`$, write $`z=\mathrm{tr}(Z\rho)`$. The better sign guess has conditional error
 
 ```math
 h(z)=\frac{1-|z|}{2}.
@@ -54,7 +54,7 @@ For a pointer eigenstate, the rate follows directly by squaring the correspondin
 
 A count projects onto the sign opposite to the old guess. Flipping the bit then makes it agree with that conditional source state. Between counts, the Hamiltonian continues to rotate the qubit. The table explains the local operation; it does not assign a classical sign trajectory to the source between events.
 
-The exact error follows from the source–bit block equations. Define correlations $`c_z=\sum_g g\operatorname{tr}(Z\rho_g)`$ and $`c_y=\sum_g g\operatorname{tr}(Y\rho_g)`$. They satisfy
+The exact error follows from the source–bit block equations. Define correlations $`c_z=\sum_g g\mathrm{tr}(Z\rho_g)`$ and $`c_y=\sum_g g\mathrm{tr}(Y\rho_g)`$. They satisfy
 
 ```math
 \dot c_z=\Omega c_y+4\gamma(1-c_z),

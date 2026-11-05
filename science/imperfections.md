@@ -32,25 +32,25 @@ Its sum remains $`\dot\rho=\mathcal L\rho`$ for every $`\beta,d`$. Complex displ
 ```math
 \mathcal D[J_g]\rho
 =\gamma\mathcal D[Z]\rho
-+i\gamma g\operatorname{Im}\beta[Z,\rho].
++i\gamma g\mathrm{Im}\beta[Z,\rho].
 ```
 
 Consequently the equivalent no-count representation uses
 
 ```math
-H_g=\frac{\Omega X}{2}+\gamma g\operatorname{Im}\beta\,Z
+H_g=\frac{\Omega X}{2}+\gamma g\mathrm{Im}\beta\,Z
 ```
 
 together with $`(\Gamma-\gamma)\mathcal D[Z]`$ and the anticommutator loss from $`J_g`$. This Hamiltonian term belongs to the representation of the output instrument. It cancels the displacement term in the dissipator; it is not a physical feedback drive applied to the source. The source-preserving block equation avoids confusing those two operations.
 
 ## 2. Exact stationary error
 
-Use the correlations $`c_z,c_y`$ defined in [the ideal receiver](counting.md), and set $`x=\operatorname{Tr}[X(\rho_++\rho_-)]`$. Direct substitution gives
+Use the correlations $`c_z,c_y`$ defined in [the ideal receiver](counting.md), and set $`x=\mathrm{Tr}[X(\rho_++\rho_-)]`$. Direct substitution gives
 
 ```math
 \begin{aligned}
-\dot c_z&=\Omega c_y-k_zc_z+4\gamma\operatorname{Re}\beta,\\
-\dot c_y&=-\Omega c_z-k_yc_y+4\gamma\operatorname{Im}\beta\,x,\\
+\dot c_z&=\Omega c_y-k_zc_z+4\gamma\mathrm{Re}\beta,\\
+\dot c_y&=-\Omega c_z-k_yc_y+4\gamma\mathrm{Im}\beta\,x,\\
 \dot x&=-2\Gamma x,
 \end{aligned}
 ```
@@ -73,7 +73,7 @@ The forcing proportional to $`x`$ decays, and the remaining stable two-dimension
 
 ```math
 c_z^{\mathrm{ss}}
-=\frac{4\gamma\operatorname{Re}\beta}
+=\frac{4\gamma\mathrm{Re}\beta}
 {2\gamma(1+|\beta|^2)+2d+\Omega^2/(2A_\beta)},
 \qquad
 e_\beta=\frac{1-c_z^{\mathrm{ss}}}{2}.
@@ -90,7 +90,7 @@ B_\beta=1+|\beta|^2,
 \ell=\frac d\gamma+\frac{\Omega^2}{4\gamma A_\beta}.
 ```
 
-Since $`B_\beta-C_\beta=2\operatorname{Re}\beta`$,
+Since $`B_\beta-C_\beta=2\mathrm{Re}\beta`$,
 
 ```math
 \boxed{

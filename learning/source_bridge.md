@@ -81,9 +81,9 @@ Between clicks, the Hamiltonian and the no-count evolution remain active. Descri
 The project-provided simplification is that two correlations close:
 
 ```math
-c_z=\sum_g g\operatorname{Tr}(Z\rho_g),
+c_z=\sum_g g\mathrm{Tr}(Z\rho_g),
 \qquad
-c_y=\sum_g g\operatorname{Tr}(Y\rho_g),
+c_y=\sum_g g\mathrm{Tr}(Y\rho_g),
 ```
 
 ```math

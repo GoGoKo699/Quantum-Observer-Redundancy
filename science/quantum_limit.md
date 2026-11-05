@@ -324,12 +324,12 @@ S_0=\sum_k c_0(d_k)^2
 For products of numbers in $`[0,1]`$, the absolute difference of the products is at most the sum of the absolute differences of their factors. Using the two overlap estimates and $`c_0(d_k)^2\le\Omega^2d_k^2/4`$ therefore gives
 
 ```math
+\begin{aligned}
 |S-S_0|
-\le\Omega^4\left[
-\frac1{12}\sum_i d_i^4
-+\frac18\sum_{k<i}d_k^2d_i^2
-\right]
-\le\frac{\Omega^4}{12}\left(\sum_i d_i^2\right)^2.
+&\le\frac{\Omega^4}{12}\sum_i d_i^4
++\frac{\Omega^4}{8}\sum_{k\lt i}(d_kd_i)^2\\
+&\le\frac{\Omega^4}{12}\left(\sum_i d_i^2\right)^2.
+\end{aligned}
 ```
 
 Also,
@@ -418,7 +418,7 @@ It follows that
 =\frac{8\gamma^2}{s(s+4\gamma)(s+2\Gamma)}.
 ```
 
-Equivalently, for independent exponential variables $`X\sim\operatorname{Exp}(4\gamma)`$ and $`Y\sim\operatorname{Exp}(2\Gamma)`$,
+Equivalently, for independent exponential variables $`X\sim\mathrm{Exp}(4\gamma)`$ and $`Y\sim\mathrm{Exp}(2\Gamma)`$,
 
 ```math
 F(L)=\frac\gamma\Gamma\Pr(X+Y\le L),

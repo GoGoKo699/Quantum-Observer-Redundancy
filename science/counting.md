@@ -31,7 +31,7 @@ The jump interpretation explains the receiver, but the calculation below does no
 
 ## 2. Joint state of the source and stored bit
 
-Let $`\rho_g`$ be the unnormalized source state in the sector with stored bit $`g`$. Then $`\rho_++\rho_-`$ is the unconditional source state, and $`\sum_g\operatorname{Tr}\rho_g=1`$. The block master equation is
+Let $`\rho_g`$ be the unnormalized source state in the sector with stored bit $`g`$. Then $`\rho_++\rho_-`$ is the unconditional source state, and $`\sum_g\mathrm{Tr}\rho_g=1`$. The block master equation is
 
 ```math
 \dot\rho_g
@@ -57,16 +57,16 @@ This is the usual positive no-count evolution with the received-channel counts r
 Define the two real correlations
 
 ```math
-c_z=\sum_{g=\pm1}g\operatorname{Tr}(Z\rho_g),
+c_z=\sum_{g=\pm1}g\mathrm{Tr}(Z\rho_g),
 \qquad
-c_y=\sum_{g=\pm1}g\operatorname{Tr}(Y\rho_g).
+c_y=\sum_{g=\pm1}g\mathrm{Tr}(Y\rho_g).
 ```
 
 The terminal guessing error is
 
 ```math
 e_{\mathrm{null}}(t)
-=\sum_g\operatorname{Tr}(P_{-g}\rho_g)
+=\sum_g\mathrm{Tr}(P_{-g}\rho_g)
 =\frac{1-c_z(t)}2.
 ```
 

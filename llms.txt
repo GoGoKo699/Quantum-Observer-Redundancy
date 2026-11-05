@@ -15,6 +15,15 @@ This project studies causal prediction of a terminal projective Z outcome of a d
 - Bibliographic identities: references/references.bib
 - Numerical commands, coverage and limits: verification/README.md
 
+## Learning routes
+
+- Selected educational anchor, reading choices and scope: learning/README.md
+- Exactly thirty project-defined targets, their dependencies and source pointers: learning/milestones.md
+- Wiseman and Milburn (first edition, 2010), verified sections, notation and missing project steps: learning/source_bridge.md
+- Worked examples following the settled milestone map: learning/tutorial.md
+
+The common map has eleven background milestones and nineteen narrative milestones. The source bridge and tutorial explain the current scientific account; exact assumptions and proofs remain in science/. Use one educational anchor and retain the separately attributed primary research references.
+
 ## Essential distinctions
 
 The counting formula is exact for the specified receiver; unrestricted quantum optimality is asymptotic. The quantum converse is uniform for received fractions at most one half. The homodyne theorem is for a diffusive quadrature current, not finite-local-oscillator counting or all Gaussian preprocessing. Its finite bracket requires r^2 + eta < 1. The classical Wonham error is a reference in that bracket. The result concerns individual long-run marginal errors and does not establish simultaneous unanimous agreement. Long-run operation precedes the small-parameter limit. The observer-count logarithm requires the stated joint weak-drive and small-tolerance regime. Read the source pages before transferring a result to a different task.

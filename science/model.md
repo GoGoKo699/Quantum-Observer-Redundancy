@@ -47,7 +47,7 @@ e_\pi(t)=\Pr\{g_\pi(t)\ne Z_t^{\mathrm{test}}\},
 
 Each value $`e_\pi(t)`$ refers to the experiment stopped and tested at that time. The integral does not insert repeated projective measurements of the source into a single run. Equivalently, one can sample a test time uniformly in a long operating interval. A fixed causal receiver runs throughout that interval.
 
-Earlier output observables commute with the terminal source observable. This gives a joint probability distribution for all observers' guesses and the one terminal test. An observer with a classical record and conditional source state $`\rho_t`$ minimizes its error by taking the sign of $`z_t=\operatorname{Tr}(Z\rho_t)`$. Its conditional error is
+Earlier output observables commute with the terminal source observable. This gives a joint probability distribution for all observers' guesses and the one terminal test. An observer with a classical record and conditional source state $`\rho_t`$ minimizes its error by taking the sign of $`z_t=\mathrm{Tr}(Z\rho_t)`$. Its conditional error is
 
 ```math
 h(z_t)=\frac{1-|z_t|}{2}.

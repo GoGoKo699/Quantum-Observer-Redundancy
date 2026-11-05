@@ -324,12 +324,12 @@ S_0=\sum_k c_0(d_k)^2
 For products of numbers in $`[0,1]`$, the absolute difference of the products is at most the sum of the absolute differences of their factors. Using the two overlap estimates and $`c_0(d_k)^2\le\Omega^2d_k^2/4`$ therefore gives
 
 ```math
+\begin{aligned}
 |S-S_0|
-\le\Omega^4\left[
-\frac1{12}\sum_i d_i^4
-+\frac18\sum_{k\lt i}d_k^2d_i^2
-\right]
-\le\frac{\Omega^4}{12}\left(\sum_i d_i^2\right)^2.
+&\le\frac{\Omega^4}{12}\sum_i d_i^4
++\frac{\Omega^4}{8}\sum_{k\lt i}(d_kd_i)^2\\
+&\le\frac{\Omega^4}{12}\left(\sum_i d_i^2\right)^2.
+\end{aligned}
 ```
 
 Also,

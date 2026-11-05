@@ -285,7 +285,7 @@ and hence $`a_q f_q''-zf_q'=h-e`$ in the interior. Since $`h`$ is continuous and
 
 ### 3.2 Convexity and endpoint regularity
 
-For $`0<z<1`$, define three positive integrals:
+For $`0\lt z\lt 1`$, define three positive integrals:
 
 ```math
 \begin{aligned}

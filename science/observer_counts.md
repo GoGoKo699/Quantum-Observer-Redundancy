@@ -118,7 +118,7 @@ The counting receiver attains the leading quantum observer count using one class
 
 ### 3.1 Quantum count
 
-Fix a constant $`0<a<1`$. At
+Fix a constant $`0\lt a\lt 1`$. At
 
 ```math
 R_-=\left\lfloor\frac{16(1-a)\epsilon}{s^2}\right\rfloor,

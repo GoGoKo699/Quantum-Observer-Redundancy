@@ -167,7 +167,7 @@ The project constructs a function $`f_q`$ solving a Poisson equation for the cla
 \qquad
 f_q''\ge0,
 \qquad
-\|f_q'\|_\infty=e_{\mathrm W}(q).
+\lVert f_q'\rVert_\infty=e_{\mathrm W}(q).
 ```
 
 The equation turns a time-averaged error into terms that can be estimated using the exact quantum dynamics. The gradient identity makes the troublesome correction proportional to the error scale itself. Convexity makes the contribution from reducing the measured signal quadrature nonnegative in the lower-bound identity. These are the reasons that arbitrary adaptive phase cannot remove the leading logarithm.

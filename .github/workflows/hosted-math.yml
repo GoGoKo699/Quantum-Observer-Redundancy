@@ -31,10 +31,11 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
-      - name: Install the capture runtime
+      - name: Install capture packages
         run: |
           npm install --prefix "$RUNNER_TEMP/math-runtime" playwright@1.56.1 mathjax-full@3.2.1
-          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Install Chromium on the stock runner
+        run: node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install chromium
       - name: Compare every hosted mathematical expression
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"

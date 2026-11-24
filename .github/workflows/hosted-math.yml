@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      CAPTURE_REVISION: '22593e351e4e9e5817f57d2033dba61a4fe4c550'
+      CAPTURE_REVISION: '160bd9d16153d07c421792a117f0a2e7b1d9c377'
     steps:
       - name: Check out the validation branch and exact source history
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4

@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      CAPTURE_REVISION: '3b8e900b0c4bde9870f6e85bec918b9e93be89c9'
+      CAPTURE_REVISION: '22593e351e4e9e5817f57d2033dba61a4fe4c550'
     steps:
       - name: Check out the validation branch and exact source history
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -39,16 +39,29 @@ jobs:
       - name: Compare every hosted mathematical expression
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
-          node verification/hosted_math/capture_hosted_math.cjs \
-            --root "$GITHUB_WORKSPACE" \
-            --repository "$GITHUB_REPOSITORY" \
-            --revision "$CAPTURE_REVISION" \
-            --output "$RUNNER_TEMP/hosted-math"
+          capture=(
+            node verification/hosted_math/capture_hosted_math.cjs
+            --root "$GITHUB_WORKSPACE"
+            --repository "$GITHUB_REPOSITORY"
+            --revision "$CAPTURE_REVISION"
+          )
+          if "${capture[@]}" --output "$RUNNER_TEMP/hosted-math"; then
+            exit 0
+          fi
+          report="$RUNNER_TEMP/hosted-math/hosted-report.json"
+          if test -f "$report" && grep -q 'transport_failure: Error: HTTP 50[234]' "$report"; then
+            mv "$RUNNER_TEMP/hosted-math" "$RUNNER_TEMP/hosted-math-first"
+            "${capture[@]}" --resume-from "$RUNNER_TEMP/hosted-math-first" --output "$RUNNER_TEMP/hosted-math"
+          else
+            exit 1
+          fi
       - name: Retain the actual captures and comparison report
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: hosted-math-${{ env.CAPTURE_REVISION }}
-          path: ${{ runner.temp }}/hosted-math
+          path: |
+            ${{ runner.temp }}/hosted-math
+            ${{ runner.temp }}/hosted-math-first
           if-no-files-found: error
           retention-days: 14

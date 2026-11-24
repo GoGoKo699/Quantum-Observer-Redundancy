@@ -150,4 +150,6 @@ R_{\mathrm{null}}(\epsilon;\Gamma,\Omega)
 
 A floor of zero means that this construction cannot meet the tolerance even for one observer. [Observer counts](observer_counts.md) combines this construction with receiver-independent bounds and allows unequal fixed fractions.
 
+The [joint law](unanimity.md) gives the stationary distribution of wrong guesses and the exact best output split for simultaneous correctness.
+
 The [verification suite](../verification/README.md) constructs the full eight-dimensional linear generator for the two unnormalized density matrices, solves its stationary state without using the correlation formula, and checks the transient closure on random positive block states. These finite numerical checks support the algebra; the closed equations above provide the proof.

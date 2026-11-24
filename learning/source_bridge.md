@@ -199,7 +199,7 @@ R_{\mathrm H}\sim\frac{32\epsilon}{s^2\log(1/\epsilon)},
 
 provided $`\epsilon\to0`$, $`s\to0`$, and $`s^2\log(1/\epsilon)=o(\epsilon)`$. The last condition makes both counts diverge, so integer rounding and weak-fragment limits are controlled. It is not legitimate to infer an unbounded ratio merely by sending the tolerance to zero at a fixed nonzero drive ratio.
 
-[The count proof](../science/observer_counts.md) sandwiches attainable and excluded observer numbers. This inversion and allocation argument are supplied by the project. The criterion constrains each observer's individual error. It gives pairwise disagreement bounds, but it does not assert simultaneous unanimity of arbitrarily many observers.
+[The count proof](../science/observer_counts.md) sandwiches attainable and excluded observer numbers. This inversion and allocation argument are supplied by the project. For simultaneous correctness, the [joint counting proof](../science/unanimity.md) keeps every guess sector of the same block instrument. Eliminating coherence at stationarity gives the terminal error distribution through a reset-and-flip process. The order of its resets gives the all-correct law and the optimal allocation.
 
 ## Calibration, loss, and dark counts
 

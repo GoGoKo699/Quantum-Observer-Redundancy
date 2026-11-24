@@ -263,21 +263,21 @@ The counting and quantum-limit thread runs from M12 to M19. The classical-refere
 
 **Why equal sharing is optimal**
 
-- **Central question:** Could an unequal fixed allocation support more marginally accurate observers?
-- **Understanding target:** Use the weakest branch, emulate its actual receiver with stronger access, and explain classical current degradation within the diffusive homodyne class without assuming an optimizer is attained.
+- **Central question:** Why does equal sharing solve both the marginal allocation problem and the all-correct allocation problem for ideal counting?
+- **Understanding target:** Recover the weakest-branch emulation argument for marginal accuracy. For the joint event, explain how the exponential-order recursion and tangent inequality give equal rates.
 - **Dependencies and story role:** [M04](#m04), [M09](#m09), [M11](#m11), [M24](#m24). Converts single-observer performance into a statement about all fixed allocations.
 - **Conceptual connection:** Access monotonicity and a marginal error criterion let independent copies of an actual receiver establish equal-sharing feasibility despite correlated source records.
-- **Source pointers:** W&M §1.4 and §4.8 provide generalized-measurement and partial-detection foundations; the allocation argument is supplied by the project. Project: [Weakest-branch proof](../science/observer_counts.md#1-fixed-allocations-and-the-weakest-branch); [measurement classes](../science/model.md#3-receiver-classes).
+- **Source pointers:** W&M §1.4 and §4.8 provide generalized-measurement and partial-detection foundations; the allocation argument is supplied by the project. Project: [Weakest-branch proof](../science/observer_counts.md#1-fixed-allocations-and-the-weakest-branch) and [joint law and optimal split](../science/unanimity.md).
 
 ### M26
 
 **From error to the observer-count laws**
 
-- **Central question:** How do the two single-observer errors determine optimal integer observer counts?
+- **Central question:** How do the marginal and simultaneous error laws determine supported observer counts?
 - **Understanding target:** Follow the attainable and excluded threshold counts, retain the joint accuracy/drive condition, and explain why monotonicity excludes larger counts without extrapolating a small-parameter remainder.
 - **Dependencies and story role:** [M24](#m24), [M25](#m25). Establishes the project's shared-resource consequence.
-- **Conceptual connection:** The homodyne logarithm becomes a logarithmic ratio of observer capacities only in a regime where both counts diverge and integer rounding becomes negligible.
-- **Source pointers:** W&M §2.7 supplies the decision-error foundation; the resource inversion and joint limit are project results. Project: [Observer-count theorem and threshold proofs](../science/observer_counts.md#3-the-observer-count-theorem).
+- **Conceptual connection:** The marginal homodyne logarithm and the harmonic factor in the joint counting law arise from different mechanisms. Diverging counts make integer rounding negligible.
+- **Source pointers:** W&M §2.7 supplies the decision-error foundation; the resource inversion and joint limit are project results. Project: [Marginal threshold theorem](../science/observer_counts.md#3-the-observer-count-theorem) and [simultaneous threshold](../science/unanimity.md#5-the-growing-observer-limit).
 
 ### M27
 
@@ -316,5 +316,5 @@ The counting and quantum-limit thread runs from M12 to M19. The classical-refere
 - **Central question:** What can the complete argument say about many observers agreeing on a changing quantum observable?
 - **Understanding target:** Explain the optimal quantum count, the smaller diffusive-homodyne count and their logarithmic ratio together with fixed sharing, causal access, apparatus assumptions, calibration requirements and the distinction between marginal accuracy and unanimity.
 - **Dependencies and story role:** [M11](#m11), [M19](#m19), [M24](#m24), [M26](#m26), [M28](#m28), [M29](#m29). Synthesizes the narrative from local receiver actions to the full operational contribution and its limits.
-- **Conceptual connection:** The conclusion concerns how a specified quantum output supports accurate current guesses. It neither assigns a classical trajectory to the source nor establishes simultaneous independent observer errors.
+- **Conceptual connection:** The observers can be scored individually or on simultaneous correctness. A shared source correlates their errors, as seen in the exact stationary counting law.
 - **Source pointers:** W&M §§1.4, 2.7, 4.7 and 4.8 provide the common measurement, decision, monitoring and access framework; the combined scientific statement resides in the project. Project: [Physical interpretation](../science/observer_counts.md#5-physical-interpretation); [marginal resource criterion](../science/model.md#4-the-resource-and-the-observer-count); [scientific proof route](../science/README.md).

@@ -9,7 +9,7 @@ The source obeys
 \qquad \mathcal D[Z]\rho=Z\rho Z-\rho.
 ```
 
-Each observer receives a fixed fraction of the output, uses only its own past field, and predicts the outcome of a terminal projective $`Z`$ measurement. The source receives no feedback. Accuracy means each observer's long-run mean error; it does not presume a hidden classical source trajectory or simultaneous unanimous agreement.
+Each observer receives a fixed fraction of the output, uses only its own past field, and predicts the outcome of a terminal projective $`Z`$ measurement. The source receives no feedback. The common terminal test allows two scores, the error of an individual guess and the chance that anyone is wrong.
 
 ## Principal results
 
@@ -46,6 +46,16 @@ Equal fixed output fractions are optimal for this marginal error criterion. The 
 
 The figure shows a single branch at fixed received fraction $`\eta=10^{-4}`$ while the drive varies. The shaded region bounds the optimized quantum homodyne error. The dashed Wonham curve is a classical reference, not an exact finite-parameter quantum error. [Values and generator](verification/README.md) are included.
 
+## When every observer must be right
+
+For ideal one-bit counting, equal shares uniquely maximize stationary all-correct probability at fixed total received coupling and every positive drive. With $`R`$ observers sharing the full output and $`a=s^2R/16`$ for $`s=\Omega/\Gamma`$, the wrong-guess count has a beta-binomial distribution, and
+
+```math
+\Pr\{\text{all correct}\}=\prod_{j=1}^R\frac{j+a}{j+2a}.
+```
+
+At $`R=100`$ and $`a=0.01`$, each observer errs with probability $`0.98\%`$, while the probability that at least one is wrong is $`5.03\%`$. In the small-error regime the group error is asymptotic to $`aH_R`$, where $`H_R=\sum_{j=1}^R1/j`$. Requiring every guess to be right cuts the supported one-bit observer count by a logarithmic factor when the allowed error tends to zero and the count diverges. The [joint law and allocation proof](science/unanimity.md) derive this from the stationary quantum instrument.
+
 ## Reading routes
 
 | What you want to understand | Start here |
@@ -57,6 +67,7 @@ The figure shows a single branch at fixed received fraction $`\eta=10^{-4}`$ whi
 | Why quantum memory cannot improve the leading error | [The partial-output quantum limit](science/quantum_limit.md) |
 | Why adaptive quadrature choice retains the logarithm | [Diffusive homodyne](science/homodyne.md) |
 | How individual errors determine the number of observers | [Observer counts](science/observer_counts.md) |
+| How often all counting observers are right | [Simultaneous correctness](science/unanimity.md) |
 | Which detector imperfections consume the accuracy budget | [Calibration, loss and dark counts](science/imperfections.md) |
 | What is inherited and what the proofs add | [Related work](references/related-work.md) and [bibliography](references/references.bib) |
 
@@ -70,10 +81,11 @@ With Python 3.12 and the pinned dependencies:
 python -m pip install -r verification/requirements.txt
 python verification/verify_tracking.py
 python verification/verify_quantum_limit.py
+python verification/verify_unanimity.py
 python verification/generate_comparison.py
 ```
 
-The first two scripts report finite checks of independently constructed matrix models, field-overlap identities, discrimination bounds and quadratures. They return a nonzero status on failure. The third regenerates the figure and finite observer-count examples. [Verification details](verification/README.md) distinguish these checks from the analytical proofs.
+The check scripts cover independently constructed matrix models, field-overlap identities, discrimination bounds, quadratures and the joint counting law. The last command regenerates the figure and finite observer-count examples. [Verification details](verification/README.md) distinguish these checks from the analytical proofs.
 
 ## Scope
 

@@ -10,11 +10,12 @@ The reference environment is Python 3.12.14 with NumPy 2.3.5, SciPy 1.17.0 and M
 python -m pip install -r verification/requirements.txt
 ```
 
-Run the two scientific check suites:
+Run the scientific checks:
 
 ```bash
 python verification/verify_tracking.py
 python verification/verify_quantum_limit.py
+python verification/verify_unanimity.py
 ```
 
 Each prints a JSON report and returns a nonzero exit status if a check fails. To retain reports locally, use the optional output argument:
@@ -22,9 +23,10 @@ Each prints a JSON report and returns a nonzero exit status if a check fails. To
 ```bash
 python verification/verify_tracking.py --output verification/results/tracking.json
 python verification/verify_quantum_limit.py --output verification/results/quantum_limit.json
+python verification/verify_unanimity.py --output verification/results/unanimity.json
 ```
 
-The output directory is excluded from version control. Neither script needs network access. Both use fixed random seeds for reproducible finite samples.
+The output directory is excluded from version control. These scripts run offline and use fixed random seeds for reproducible finite samples.
 
 ## What is checked
 
@@ -32,6 +34,7 @@ The output directory is excluded from version control. Neither script needs netw
 |---|---|---|
 | [verify_tracking.py](verify_tracking.py) | An eight-dimensional generator acting on two unnormalized qubit states; stationary solutions from linear algebra; direct derivatives on random positive states | Nine stationary parameter cases, 90 random-state derivative cases, complex-displacement source invariance, positivity and normalization, and six Bessel-versus-positive-quadrature comparisons. Checks the counting and imperfection algebra. |
 | [verify_quantum_limit.py](verify_quantum_limit.py) | Interval channels from Liouville-space exponentiation, field overlaps reconstructed from Choi matrices, direct finite binary Helstrom errors, and Poisson-age quadrature | 250 interval cases, 250 finite partitions and nine renewal quadratures by default. Checks channel conventions, overlap identities, local remainders, unequal genie weights and the renewal coefficient. |
+| [verify_unanimity.py](verify_unanimity.py) | Dense quantum block generators and the exact joint formulas | 27 stationary quantum solves, 18 equal-split beta-binomial comparisons and 432 allocation checks. |
 | [generate_comparison.py](generate_comparison.py) | Evaluation of the analytical counting formula and homodyne brackets; root finding with checked adjacent integer inequalities | Generates the two-panel figure and three finite observer-count examples. Illustrates proven bounds; it does not simulate a quantum trajectory or certify floating-point rounding by interval arithmetic. |
 
 The augmented-generator calculation fixes the unconditional state to $`I/2`$ when finding stationary blocks. This also makes the zero-drive checks well defined, since the zero-drive source alone has conserved $`Z`$ populations. Random-state derivative checks independently test the correlation closure away from stationarity. Complex displacement is implemented with the source-preserving block generator, including the effect represented by the instrument Hamiltonian in a no-count formulation.
@@ -67,4 +70,4 @@ The count table instead holds $`s=\Omega/\Gamma=10^{-4}`$ fixed and uses $`\eta=
 
 The tests do not establish the physical validity of the inaccessible-output instrument, its screening of arbitrary older quantum memory, the uniformity of the renewal remainder, or the arbitrary-policy homodyne inequality. Those require the respective proofs in [quantum_limit.md](../science/quantum_limit.md) and [homodyne.md](../science/homodyne.md). The homodyne comparison is analytical; no stochastic simulation is used to establish its asymptotic law.
 
-The project also does not infer simultaneous independent observer errors, optimize imperfect receivers, or extrapolate the partial-output converse to complete collection. These distinctions are part of the [model](../science/model.md), [observer-count theorem](../science/observer_counts.md) and [imperfection analysis](../science/imperfections.md).
+Joint counting checks retain the correlations between observers. The proof of equal-split optimality is analytical and covers ideal one-bit receivers at positive drive. These distinctions are part of the [model](../science/model.md), [observer-count theorem](../science/observer_counts.md) and [imperfection analysis](../science/imperfections.md).

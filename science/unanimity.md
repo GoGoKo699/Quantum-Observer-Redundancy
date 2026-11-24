@@ -25,8 +25,8 @@ Set $`a_i=4\gamma_i`$ and $`\lambda=\Omega^2/(4\Gamma)`$. For a subset $`S`$ of 
 ```math
 \begin{aligned}
 A_S(t)&=\mathbb E\!\left[\prod_{i\in S} b_i\right]
-=\sum_{\boldsymbol g}g_S\operatorname{Tr}\bigl(Z^{|S|}\rho_{\boldsymbol g}\bigr),\\
-C_S(t)&=\sum_{\boldsymbol g}g_S\operatorname{Tr}(Y\rho_{\boldsymbol g})\quad (|S|\text{ odd}).
+=\sum_{\boldsymbol g}g_S\mathrm{Tr}\bigl(Z^{|S|}\rho_{\boldsymbol g}\bigr),\\
+C_S(t)&=\sum_{\boldsymbol g}g_S\mathrm{Tr}(Y\rho_{\boldsymbol g})\quad (|S|\text{ odd}).
 \end{aligned}
 ```
 
@@ -120,7 +120,7 @@ With all branches of strength $`\gamma`$, write $`q=\Omega^2/(8\Gamma\gamma)=2\l
 A_k=\frac{k}{k+q\,\mathbf 1_{\{k\text{ odd}\}}}A_{k-1}.
 ```
 
-Let $`U=2X-1`$ with $`X\sim\operatorname{Beta}(1+q/2,q/2)`$. The density of $`U`$ is proportional to $`(1+u)(1-u^2)^{q/2-1}`$ on $`(-1,1)`$. The even moment $`\mathbb E[U^{2m}]`$ is the $`m`$th moment of a $`\operatorname{Beta}(1/2,q/2)`$ variable, by symmetry and the substitution $`v=u^2`$. The odd moment $`\mathbb E[U^{2m-1}]`$ equals $`\mathbb E[U^{2m}]`$ for $`m\ge1`$, since only the factor $`u`$ in $`1+u`$ contributes. The ratio between successive even moments is $`(2m-1)/(2m-1+q)`$. These are exactly the moments $`A_k`$.
+Let $`U=2X-1`$ with $`X\sim\mathrm{Beta}(1+q/2,q/2)`$. The density of $`U`$ is proportional to $`(1+u)(1-u^2)^{q/2-1}`$ on $`(-1,1)`$. The even moment $`\mathbb E[U^{2m}]`$ is the $`m`$th moment of a $`\mathrm{Beta}(1/2,q/2)`$ variable, by symmetry and the substitution $`v=u^2`$. The odd moment $`\mathbb E[U^{2m-1}]`$ equals $`\mathbb E[U^{2m}]`$ for $`m\ge1`$, since only the factor $`u`$ in $`1+u`$ contributes. The ratio between successive even moments is $`(2m-1)/(2m-1+q)`$. These are exactly the moments $`A_k`$.
 
 Conditional on $`X`$, independent binary signs that are positive with probability $`X`$ have moments $`\mathbb E[(2X-1)^k]`$. This mixture therefore has the exact stationary sign law. In particular, the number of errors $`K`$ is beta-binomial with trial count $`R`$ and shape parameters $`q/2,1+q/2`$, in that order. Its probability of zero errors is
 

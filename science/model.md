@@ -84,6 +84,8 @@ The charged shared resource is $`\Gamma`$, the total coupling to the source. Bot
 
 The criterion controls each observer's marginal error. If two observers each have error at most $`\epsilon`$ at a given time, their disagreement probability is at most $`2\epsilon`$, by the union bound. The corresponding statement holds for long-run means. There is no independence assumption, and a growing number of individually accurate guesses does not by itself imply that all guesses agree with high probability. The elementary all-observer bound is only $`R\epsilon`$.
 
+The [simultaneous-correctness task](unanimity.md) scores a group failure whenever any guess disagrees with the same terminal measurement. Its theorem optimizes this event within the ideal one-bit counting receiver class.
+
 ## 5. Dimensionless parameters and proof route
 
 The following conventions are used throughout:

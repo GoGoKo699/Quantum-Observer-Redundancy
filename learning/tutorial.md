@@ -121,6 +121,12 @@ provided $`\epsilon\to0`$, $`s\to0`$ and $`s^2\log(1/\epsilon)=o(\epsilon)`$. Th
 
 For a finite example, the supplied [comparison values](../figures/comparison_values.json) use $`s=10^{-4}`$ and $`\epsilon=10^{-3}`$. The explicit counting receiver supports **1,603,206** observers. Evaluating the homodyne inequalities gives an integer bracket from **333,694 to 334,989**. The first number comes from the exact constructive count formula; the bracket comes from finite-parameter analytical bounds evaluated in floating-point arithmetic, as explained in [verification](../verification/README.md). Neither should be relabeled as an exact finite-parameter unrestricted quantum optimum.
 
+### When all guesses must be right
+
+With 100 equal counting branches and $`a=s^2R/16=0.01`$, one observer errs with probability $`a/(1+2a)`$, about 0.98%. A recent source change can leave several guesses wrong at once.
+
+The [joint counting law](../science/unanimity.md) gives the chance of at least one error as $`1-\prod_{j=1}^{100}(j+a)/(j+2a)`$, about 5.03%. In the classical stationary representation, a common flip can make every correct observer wrong, and the local correction clocks then run separately. The last clock to finish takes longer, on average, by the harmonic factor $`H_R`$. This accounts for the logarithmic reduction in the count of simultaneously accurate observers.
+
 ## 7. The ideal coefficient has an accuracy budget
 
 **Milestones [M27–M28](milestones.md#m27).** The displacement and detector must become sufficiently accurate for the ideal asymptotic count to remain relevant. A complex displacement mismatch changes both the count operators and their no-count representation. The required Hamiltonian correction in that representation preserves the original source generator; it is not applied source feedback.
@@ -143,4 +149,4 @@ Reducing the drive alone does not remove either fixed floor. Detection loss inst
 
 **Milestones [M29–M30](milestones.md#m29).** The numerical checks independently construct finite generators, channel states, discrimination problems and quadratures. They can reveal convention, positivity, overlap and coefficient errors. The physical lost-output construction and the bound over every predictable phase remain analytical obligations, supplied by the proofs. The [verification account](../verification/README.md) and [related-work account](../references/related-work.md) separate these kinds of support and credit the inherited tools.
 
-The combined conclusion is operational: a fixed quantum output can support parametrically more accurate causal guesses through displaced counting than through the defined diffusive homodyne class. At stringent tolerance, the ratio of their optimal observer counts grows as one half times the logarithm of the inverse tolerance, in the stated joint regime. Each observer meets its own marginal criterion. Correlations among observers, simultaneous unanimity, other access models and apparatus resource costs require their own questions and assumptions.
+The combined conclusion is operational: a fixed quantum output can support parametrically more accurate causal guesses through displaced counting than through the defined diffusive homodyne class. At stringent tolerance, the ratio of their optimal observer counts grows as one half times the logarithm of the inverse tolerance, in the stated joint regime. For ideal one-bit counting, the exact stationary law also determines how many observers can be right on the same test.

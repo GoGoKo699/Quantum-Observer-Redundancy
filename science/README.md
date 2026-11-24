@@ -1,6 +1,6 @@
 # Scientific account
 
-The question is whether the same fixed quantum output supports different numbers of accurate observers depending on the local measurement. The answer follows from matched bounds for one observer, followed by an allocation argument.
+The question is whether the same fixed quantum output supports different numbers of accurate observers depending on the local measurement. Marginal bounds compare receiver classes. The joint counting law determines how many guesses are wrong at the same test time.
 
 1. [Model and definitions](model.md) specify the driven qubit, fixed output fractions, causal receivers, terminal projective test and long-run marginal error.
 2. [Displaced counting](counting.md) constructs a one-bit receiver and derives its exact error from closed source–guess correlations.
@@ -8,6 +8,7 @@ The question is whether the same fixed quantum output supports different numbers
 4. [Diffusive homodyne](homodyne.md) derives the classical Wonham reference, constructs a convex Poisson solution, and proves a relative bound for the exact quantum filter with arbitrary predictable phase.
 5. [Observer counts](observer_counts.md) turns those error laws into optimal counts under fixed output sharing and gives the joint asymptotic regime.
 6. [Imperfections](imperfections.md) gives an exact accuracy condition for calibration, loss and dark counts in the counting construction.
+7. [Simultaneous correctness](unanimity.md) gives the stationary joint error law for ideal counting, proves equal sharing optimal for the all-correct event and derives its observer-count scaling.
 
 For a first reading, follow the model, counting and observer-count pages, then return to the two lower-bound arguments. For proof review, read the model first and treat the quantum-limit and homodyne pages as separate arguments. Both feed the observer-count theorem; neither assumes the other's converse.
 

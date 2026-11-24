@@ -42,7 +42,9 @@ Binary quantum minimum-error discrimination itself is also imported. The finite 
 
 [Kiely and colleagues (2026)](https://doi.org/10.1103/hn78-7xx3) connect classical objectivity to the precision with which fragments reveal an initially encoded parameter. Their spin-star model has a static quantum-nondemolition interaction, and they compare quantum Fisher information with information obtained from specified fragment observables. This establishes that measurement choice can strongly affect precision-based redundancy. Here the source is continually driven, its Hamiltonian does not commute with the recorded observable, and the task is to predict the present outcome from the past output. The receiver optimization and the stationary error criterion are correspondingly different.
 
-The observer number in this project counts observers whose **individual marginal error** is below a threshold. The result also controls pairwise disagreement through that common target. It does not assert that every observer is simultaneously correct with a fixed probability as the number of observers grows.
+[Touil, Yan, and Zurek](https://arxiv.org/abs/2503.14791) quantify fragment consensus using refined mutual information, including its dependence on decoherence and relaxation. The [joint counting theorem](../science/unanimity.md) uses a terminal decision criterion in which all receivers must give the correct guess on one test. It gives that event's exact stationary law and best fixed split for ideal one-bit counting.
+
+[Singh et al. (2018), Eq. (5)](https://doi.org/10.1063/1.5033560) obtain a beta law for an exponentially filtered classical telegraph signal. The beta identity is a classical antecedent. The quantum counting theorem starts from the joint click instrument, recovers the stationary reset-and-flip equations, and uses them to optimize the output allocation.
 
 ## Waveform and change-point detection
 
@@ -56,13 +58,14 @@ The observer number in this project counts observers whose **individual marginal
 
 ## Contribution and limits of the comparison
 
-The central claim is the conjunction of three quantitative statements, with their full assumptions and proofs in the scientific account:
+The scientific account proves four complementary statements:
 
 | Statement | Role beyond the inherited ingredient |
 |---|---|
 | A simple displaced-counting receiver has an exact stationary error. | Gives an attainable benchmark for the driven Hermitian-dephasing source at every positive drive and received rate. |
 | The optimum partial-output quantum error has the same leading coefficient. | Controls arbitrary causal quantum memory by a physical lost-output instrument, exact field overlaps, and a uniform renewal estimate. |
 | The optimum diffusive homodyne error retains a leading logarithmic penalty in the weak-fragment, small-error regime, even with arbitrary adaptive phase. | Connects the classical comparator to the exact quantum source through a relative, policy-uniform bound, with a fixed real quadrature attaining the leading error. |
+| Equal splitting maximizes simultaneous correctness for ideal one-bit counting. | Gives the exact stationary joint law and the harmonic-number penalty relative to marginal correctness. |
 
 The resulting observer-count separation follows from these matched receiver limits at fixed total dephasing. The quantum theorem is uniform for received fractions at most one half. The homodyne asymptotic additionally takes the received fraction to zero. Complete output access is a distinct endpoint: retaining the entire output coherently can outperform the nulling receiver, as explained in [the endpoint analysis](../science/quantum_limit.md#10-complete-output-access-is-a-genuine-exception).
 

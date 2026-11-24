@@ -19,6 +19,6 @@ The tutorial supplies worked examples and the main logical connections. The brid
 
 ## The distinctions to keep throughout
 
-The target is a terminal projective Z outcome at a fixed or independently sampled test time. Accuracy is each observer's long-run marginal error. The total source coupling and output fractions are fixed, and no observer sends feedback to the source or communicates with another observer.
+The target is a terminal projective Z outcome at a fixed or independently sampled test time. A test can score each guess separately or ask whether all guesses are correct. The [joint counting law](../science/unanimity.md) treats the second score. The total source coupling and output fractions are fixed, and no observer sends feedback to the source or communicates with another observer.
 
 The counting receiver has an exact finite-parameter error formula. Its unrestricted quantum optimality is asymptotic in the stated partial-output regime. The homodyne result covers diffusive quadrature currents with arbitrary predictable phase; its classical filtering reference is connected to the exact quantum source by a controlled relative bound. The observer-count comparison uses a joint weak-drive and small-tolerance limit. These distinctions are part of the result and remain visible in every reading route.

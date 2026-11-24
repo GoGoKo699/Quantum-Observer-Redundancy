@@ -252,7 +252,7 @@ f_q'(1)=e_{\mathrm W}(q),
 \qquad
 f_q'(-1)=-e_{\mathrm W}(q),
 \qquad
-\|f_q'\|_\infty=e_{\mathrm W}(q),
+\lVert f_q'\rVert_\infty=e_{\mathrm W}(q),
 \qquad
 f_q''\ge0.
 ```

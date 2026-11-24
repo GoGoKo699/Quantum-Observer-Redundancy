@@ -148,11 +148,11 @@ Conjugating the source by $`X`$ preserves its Hamiltonian and reverses the sign 
 
 ```math
 p(d)
-=\|\phi_{-,+}(d)\|^2
-=\|\phi_{+,-}(d)\|^2,
+=\lVert \phi_{-,+}(d)\rVert^2
+=\lVert \phi_{+,-}(d)\rVert^2,
 \qquad
-\|\phi_{+,+}(d)\|^2
-=\|\phi_{-,-}(d)\|^2=1-p(d).
+\lVert \phi_{+,+}(d)\rVert^2
+=\lVert \phi_{-,-}(d)\rVert^2=1-p(d).
 ```
 
 For fixed interval lengths, the indicators of a changed sign at successive endpoints are therefore independent Bernoulli variables with probabilities $`p_i=p(d_i)`$. Conditional on a complete sequence of endpoint outcomes, the interval fields are a tensor product of pure states. This is an exact decomposition of the quantum experiment. A changed endpoint sign is not an assumption about an unmeasured ontic trajectory between endpoints.

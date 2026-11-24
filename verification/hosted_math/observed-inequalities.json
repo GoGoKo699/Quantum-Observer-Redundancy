@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "science/unanimity.md",
+      "index": 69,
+      "source_sha256": "5fd30df534c9587415985eb03d6af1ffef89f05ed0d98bc29729b3f766275039",
+      "allow_html_like_inequality": true,
+      "expected_text": "(log⁡f)′(y)=λ(y+λ)(y+2λ),0<y(log⁡f)′(y)<1(y>0).",
+      "reason": "The literal less-than sign rendered the exact expected inequality at both viewport widths. Both actual MathML token trees match the source and had no renderer or geometry errors.",
+      "evidence": "GitHub Actions run 45326660008, archive 14890031908, exact source 160bd9d16153d07c421792a117f0a2e7b1d9c377, both pinned hosted captures."
+    },
+    {
+      "path": "science/unanimity.md",
+      "index": 72,
+      "source_sha256": "6d28241cb62cc91a36cf116ca4ef72f970d5c1866d77fdf1ef2779011db636d8",
+      "allow_html_like_inequality": true,
+      "expected_text": "xF′(x)/F(x)<k−1",
+      "reason": "The literal less-than sign rendered the exact expected inequality at both viewport widths. Both actual MathML token trees match the source and had no renderer or geometry errors.",
+      "evidence": "GitHub Actions run 45326660008, archive 14890031908, exact source 160bd9d16153d07c421792a117f0a2e7b1d9c377, both pinned hosted captures."
+    }
+  ]
+}

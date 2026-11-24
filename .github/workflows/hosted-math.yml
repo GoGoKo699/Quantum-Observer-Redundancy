@@ -44,6 +44,7 @@ jobs:
             --root "$GITHUB_WORKSPACE"
             --repository "$GITHUB_REPOSITORY"
             --revision "$CAPTURE_REVISION"
+            --contract verification/hosted_math/observed-inequalities.json
           )
           if "${capture[@]}" --output "$RUNNER_TEMP/hosted-math"; then
             exit 0
